@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Swap images</title>
+    <style>
+      .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        height: 60vh;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+      }
+      input {
+        width: 773px;
+        margin: 35px 0 0 0;
+        border-radius: 25px;
+        border: none;
+        background-color: rgb(70, 221, 255);
+        
+      }
+    #btn
+    {
+        width: 30%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="images">
+          <img src="/img1.jpeg" id="p1" height="275" />
+          <br><br>
+          <img src="/img2.jpeg" id="p2" height="275" />
+        </div>
+        <input id="btn" type="button" value="Swap images" onclick="swap1()" />
+      </div>
+    </div>
+
+    <script>
+      function swap1() {
+        var txt1 = document.getElementById("p1");
+        var txt2 = document.getElementById("p2");
+        var txt = txt1.src;
+        txt1.src = txt2.src;
+        txt2.src = txt;
+      }
+    </script>
+  </body>
+</html>

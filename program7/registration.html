@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign up</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main{
+            height: 70vh;
+            width: 50%;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+          rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            position: relative;
+            top: 50px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 5px;
+        }
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .box
+        {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+        }
+        label{
+            margin: 3px 0;
+        }
+        input{
+            width: 400px;
+            border-radius: 20px;
+        }
+        button{
+            width: 410px;
+            border-radius: 20px;
+            margin: 20px;
+            padding: 3px 0;
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 51, 255);
+        }
+        button:hover{
+            background-color: aqua;
+        }
+        h1{
+            border-bottom: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <h1>Sign up</h1>
+            <form action="#">
+                <div class="box">
+                <label for="uname">Name</label>
+                <input type="text" id="uname" required>
+                </div>
+                <div class="box">
+                <label for="phno">Number</label>
+                <input type="number" id="phno" required>
+                </div>
+                <div class="box">
+                <label for="emid">Email</label>
+                <input type="email" id="emid">
+                </div>
+                <div class="box">
+                <label for="pass">Password</label>
+                <input type="password" id="pass" required>
+                </div>
+                <div class="box">
+                <label for="cpass">Confirm Password</label>
+                <input type="password" id="cpass" required>
+                </div>
+                <button type="submit">Submit</button>
+                
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

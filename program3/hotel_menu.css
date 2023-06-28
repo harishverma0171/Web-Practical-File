@@ -1,0 +1,67 @@
+body
+{
+    text-align: center;
+}
+#menu{
+    flex-direction: column;
+}
+.navbar
+{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    padding: 20px;
+}
+
+#items{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 1080px;
+    border-radius: 10px;
+    margin: auto;
+    
+}
+h1{
+    padding: 20px 0;
+    margin: auto;
+}
+.inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+.inner:hover{
+    background-color: orange;
+    
+}
+#img3 , #img4 , #img5, #img6, #img7, #img8{
+    width: 330px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 10px;
+}
+#img3{
+    background-image: url(veg_thalli.jpeg); 
+}
+#img4{
+    background-image: url(idlli.jpeg);
+}
+#img5{
+    background-image: url(Dosa.jpg);
+}
+#img6{
+    background-image: url(burger.jpeg); 
+}
+#img7{
+    background-image: url(pasta.jpeg);
+}
+#img8{
+    background-image: url(maggi1.jpg);
+}

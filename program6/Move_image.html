@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Move Image</title>
+    <style type="text/css">
+      #kids {
+        position: relative;
+      }
+      #x,#y {
+        font-size: 20px;
+        color: red;
+      }
+      body{
+        background-color: antiquewhite;
+      }
+    </style>
+
+    <script type="text/javascript">
+      document.onmousemove = moveIt;
+
+      function moveIt(evnt) {
+        if (!evnt) evnt = window.event;
+
+        var x = evnt.clientX;
+        var y = evnt.clientY;
+
+        var kids = document.getElementById("kids").style;
+
+        kids.left = x + "px";
+        kids.top = y + "px";
+
+        document.getElementById("x").innerHTML = x;
+        document.getElementById("y").innerHTML = y;
+      }
+    </script>
+  </head>
+  <body>
+    X:<span id="x"></span><br />
+    Y:<span id="y"></span>
+    <div id="kids">
+      <img
+        src="nature.jpeg"
+        width="440px"
+        height="200px"
+      >
+    </div>
+  </body>
+</html>

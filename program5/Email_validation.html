@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Validate Email</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .herobox {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .main {
+        height: 40%;
+        width: 50%;
+        margin: 50px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 8px 8px 25px black;
+      }
+      .heading {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 50px 0;
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid black;
+        width: 400px;
+        outline: none;
+        font-size: 20px;
+      }
+      h1 {
+        border-bottom: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="herobox">
+      <div class="main">
+        <div class="heading">
+          <h1>Email validation</h1>
+        </div>
+        <div class="container">
+          <input
+            type="email"
+            placeholder="enter your email"
+            id="valid_email"
+            spellcheck="false"
+            onkeyup="validate_email()"
+          />
+          <p id="email_error"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var emailBox = document.getElementById("valid_email");
+      var errorMsg = document.getElementById("email_error");
+      function validate_email() {
+        if (
+          !emailBox.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{3,4}$/)
+        ) {
+          errorMsg.innerHTML = "Please enter a valid Email";
+          emailBox.style.borderBottomColor = "red";
+          return false;
+        }
+        errorMsg.innerHTML = "";
+        emailBox.style.borderBottomColor = "blue";
+        return true;
+      }
+    </script>
+  </body>
+</html>
